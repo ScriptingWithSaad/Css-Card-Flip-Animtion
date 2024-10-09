@@ -1,0 +1,140 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0003);
+    box-shadow: 5px -5px 0px gray, 10px -10px 0px rgb(182, 182, 182), 15px -15px 0px rgb(199, 199, 199);
+}
+
+.card1 {
+    background: url('../assets/images/caption.png');
+}
+
+.card2 {
+    background: url('../assets/images/deadpool.png');
+}
+
+.card3 {
+    background: url('../assets/images/iron.png');
+}
+
+.card4 {
+    background: url('../assets/images/spider.png');
+}
+
+.card .content {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(136, 116, 99, 0.1);
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+.card .content h4 {
+    letter-spacing: 1px;
+    font-size: 25px;
+    color: #fff;
+    padding-top: 10px;
+}
+
+.card .content p {
+    letter-spacing: 2px;
+    color: #fff;
+    padding-bottom: 30px;
+}
+
+.card .content .pra {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 0px 20px;
+}
+
+.card .content .icon {
+    width: 100%;
+    height: 20px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 60px;
+}
+
+.card .content .icon a {
+    transition: all 1s ease-in-out;
+    transform: rotateY(0deg);
+}
+
+.card .content .icon a:hover {
+    transform: rotateY(180deg);
+}
+
+.card:hover .content {
+    animation: content 1s linear forwards;
+}
+
+@keyframes content {
+    0% {
+        transform: rotateX(180deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+.card1 .content {
+    opacity: 1;
+}
+
+.card2 .content {
+    opacity: 0;
+}
+
+.card3 .content {
+    opacity: 1;
+}
+
+.card4 .content {
+    opacity: 0;
+}
+
+.card1:hover .content {
+    opacity: 0;
+}
+
+.card2:hover .content {
+    opacity: 1;
+}
+
+.card3:hover .content {
+    opacity: 0;
+}
+
+.card4:hover .content {
+    opacity: 1;
+}
